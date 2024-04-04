@@ -46,5 +46,5 @@ it("should throw an array if multiple arguments instead of an array", () => {
     const resultFn = ()=>{
      add(num1,num2);
     }
-    expect(resultFn).toThrow()
+    expect(resultFn).toThrow(/is not iterable/)
  })
