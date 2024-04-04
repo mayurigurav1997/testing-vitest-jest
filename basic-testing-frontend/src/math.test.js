@@ -39,3 +39,12 @@ it("should throw an array if no value is passed into the function", () => {
    }
    expect(resultFn).toThrow()
 })
+
+it("should throw an array if multiple arguments instead of an array", () => {
+    const num1=1;
+    const num2=9
+    const resultFn = ()=>{
+     add(num1,num2);
+    }
+    expect(resultFn).toThrow()
+ })
