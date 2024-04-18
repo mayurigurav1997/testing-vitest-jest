@@ -8,7 +8,7 @@ import { transformToNumber } from './src/util/numbers.js';
 import { generateResultText } from './output.js';
 
 const form = document.querySelector('form');
-const output = document.getElementById('result');
+
 
 function formSubmitHandler(event) {
   event.preventDefault();
@@ -16,8 +16,7 @@ function formSubmitHandler(event) {
 
   let result = calculateResult(numberVlaues);
   const resultText = generateResultText(result)
-
-  output.textContent = resultText;
+  outputResult(resultText)
 }
 
 form.addEventListener('submit', formSubmitHandler);
