@@ -25,6 +25,11 @@ describe('clearNumbers',()=>{
         const cleanNumbers = clearNumbers(numberValues)
         expect(cleanNumbers[0]).toBeTypeOf('number')
     })
+    it("should return an array of number values if an array with at least one empty string is provided",()=>{
+        const numberValues = ['','2']
+        const cleanFn = ()=>clearNumbers(numberValues)
+        expect(cleanFn).toThrow()
+    })
 })
 
 
